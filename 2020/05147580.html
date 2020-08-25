@@ -419,20 +419,26 @@
 <p>InputStream   </p>
 <p>FileInputStream </p>
 </blockquote>
-<p>```java<br>//InputStream是最基础的字节输入流的接口<br>//FileInputStream是最基础的文件操作字节输入流对象<br>/*使用try-catch进行捕获异常<br>1、声明输入流对象<br>2、定义每次读入的字节数大小<br>3、每次读取一个字节数组的大小，读取的内容都在字节数组中，直到字节数组返回的大小等于-1，则表示已经读取完毕<br>4、必须关闭输入流</p>
 </li>
-<li><p>/<br>try(FileInputStream fis = new FileInputStream(READ_FILE_PATH)){</p>
-<pre><code>       byte[] bytes = new byte[1024];
-       while (fis.read(bytes) != -1) &#123;
-           String str = new String(bytes);
-           System.out.println(str);
-       &#125;
-       fis.close();
-   &#125;</code></pre>
-<pre><code></code></pre>
-</li>
-<li><p>字节缓冲输入流：    </p>
-<blockquote>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">//InputStream是最基础的字节输入流的接口</span>
+<span class="token comment" spellcheck="true">//FileInputStream是最基础的文件操作字节输入流对象</span>
+<span class="token comment" spellcheck="true">/*使用try-catch进行捕获异常
+1、声明输入流对象
+2、定义每次读入的字节数大小
+3、每次读取一个字节数组的大小，读取的内容都在字节数组中，直到字节数组返回的大小等于-1，则表示已经读取完毕
+4、必须关闭输入流
+*/</span>
+ <span class="token keyword">try</span><span class="token punctuation">(</span>FileInputStream fis <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FileInputStream</span><span class="token punctuation">(</span>READ_FILE_PATH<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token punctuation">]</span> bytes <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">byte</span><span class="token punctuation">[</span><span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>fis<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                String str <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>bytes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            fis<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
+<ul>
+<li>字节缓冲输入流：    <blockquote>
 <p>BufferedInputStream<br>成员方法：   </p>
 <p>int read()  一次读取一个字节  </p>
 <p> int read(byte [] bytes) 一次读取一个字节数组</p>
