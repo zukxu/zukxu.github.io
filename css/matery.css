@@ -1658,7 +1658,7 @@ thead {
 }
 
 .profile .avatar-img {
-    max-width: 160px;
+    max-width: 120px;
     width: 100%;
     margin: 0 auto;
     transform: translate3d(0, -65%, 0);
