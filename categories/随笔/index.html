@@ -231,12 +231,14 @@
                 
             </div>
             <div class="description center-align">
-                <span id="jinrishici-sentence"></span>
-                <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
                 
                     <span id="subtitle"></span>
                     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+                    <span id="jinrishici-sentence"></span>
+                    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
                     <script>
                         var content1 = null
                         var content2 = null
@@ -247,6 +249,7 @@
                             content1 = ''
                             content2 = ''
                         }
+                        console.log(content1,content2)
                         var typed = new Typed("#subtitle", {
                             strings: [content1, content2],
                             startDelay: 300,
@@ -305,19 +308,19 @@
                 </a>
                 
                 
-                <a href="/categories/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
+                <a href="/categories/%E5%AD%A6%E4%B9%A0/" title="学习: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">博客
+                            style="background-color: #D5F5E3;">学习
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E5%AD%A6%E4%B9%A0/" title="学习: 1">
+                <a href="/categories/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #E8F8F5;">学习
+                            style="background-color: #E8F8F5;">博客
                         <span class="tag-length">1</span>
                     </span>
                 </a>

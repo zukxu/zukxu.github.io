@@ -278,12 +278,14 @@
                 
             </div>
             <div class="description center-align">
-                <span id="jinrishici-sentence"></span>
-                <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
                 
                     <span id="subtitle"></span>
                     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+                    <span id="jinrishici-sentence"></span>
+                    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
                     <script>
                         var content1 = null
                         var content2 = null
@@ -294,6 +296,7 @@
                             content1 = ''
                             content2 = ''
                         }
+                        console.log(content1,content2)
                         var typed = new Typed("#subtitle", {
                             strings: [content1, content2],
                             startDelay: 300,
