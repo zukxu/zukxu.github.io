@@ -240,31 +240,24 @@
             <div class="description center-align">
 
                 
-                    <span id="subtitle"></span>
-                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-
                     <span id="jinrishici-sentence"></span>
+                    <span id="hitokoto" style="display: none"></span>
                     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-
+                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
                     <script>
-                        var content1 = null
-                        var content2 = null
-                        if (theme.subtitle.sub1.length <= 0 && theme.subtitle.sub2.length <= 0) {
-                            content1 = $("#jinrishici-sentence").text()
-                            content2 = ""
-                        } else {
-                            content1 = ''
-                            content2 = ''
-                        }
-                        console.log(content1,content2)
-                        var typed = new Typed("#subtitle", {
-                            strings: [content1, content2],
-                            startDelay: 300,
-                            typeSpeed: 100,
-                            loop: true,
-                            backSpeed: 50,
-                            showCursor: true
-                        });
+                        setTimeout(function () {
+                            var content1 = document.getElementById("jinrishici-sentence").innerText
+                            var content2 = document.getElementById("hitokoto").innerText
+                            var typed = new Typed("#jinrishici-sentence", {
+                                strings: [content1, content2],
+                                startDelay: 3000,
+                                typeSpeed: 100,
+                                loop: true,
+                                backSpeed: 50,
+                                showCursor: true
+                            })
+                        }, 1000)
                     </script>
                 
             </div>
@@ -336,21 +329,21 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">8</a></span>
+    <span class="count"><a href="/">10</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">7</a></span>
+    <span class="count"><a href="/categories">9</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">8</a></span>
+    <span class="count"><a href="/tags">10</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -367,21 +360,21 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">8</a></span>
+    <span class="count"><a href="/">10</a></span>
     <span class="name">文章</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">7</a></span>
+    <span class="count"><a href="/categories">9</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">8</a></span>
+    <span class="count"><a href="/tags">10</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -598,8 +591,14 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/%E5%BF%83%E6%83%85/">
-                <span class="chip center-align waves-effect waves-light chip-default">心情</span>
+            <a href="/tags/Hexo/">
+                <span class="chip center-align waves-effect waves-light chip-default">Hexo</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%8D%9A%E5%AE%A2/">
+                <span class="chip center-align waves-effect waves-light chip-default">博客</span>
             </a>
             
             
@@ -616,6 +615,18 @@
             
             
             
+            <a href="/tags/%E5%BF%83%E6%83%85/">
+                <span class="chip center-align waves-effect waves-light chip-default">心情</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E7%88%AC%E8%99%AB/">
+                <span class="chip center-align waves-effect waves-light chip-default">爬虫</span>
+            </a>
+            
+            
+            
             <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                 <span class="chip center-align waves-effect waves-light chip-default">学习笔记</span>
             </a>
@@ -624,12 +635,6 @@
             
             <a href="/tags/%E6%95%99%E7%A8%8B/">
                 <span class="chip center-align waves-effect waves-light chip-default">教程</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E5%8D%9A%E5%AE%A2/">
-                <span class="chip center-align waves-effect waves-light chip-default">博客</span>
             </a>
             
             

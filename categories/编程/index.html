@@ -233,31 +233,24 @@
             <div class="description center-align">
 
                 
-                    <span id="subtitle"></span>
-                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-
                     <span id="jinrishici-sentence"></span>
+                    <span id="hitokoto" style="display: none"></span>
                     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-
+                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
                     <script>
-                        var content1 = null
-                        var content2 = null
-                        if (theme.subtitle.sub1.length <= 0 && theme.subtitle.sub2.length <= 0) {
-                            content1 = $("#jinrishici-sentence").text()
-                            content2 = ""
-                        } else {
-                            content1 = ''
-                            content2 = ''
-                        }
-                        console.log(content1,content2)
-                        var typed = new Typed("#subtitle", {
-                            strings: [content1, content2],
-                            startDelay: 300,
-                            typeSpeed: 100,
-                            loop: true,
-                            backSpeed: 50,
-                            showCursor: true
-                        });
+                        setTimeout(function () {
+                            var content1 = document.getElementById("jinrishici-sentence").innerText
+                            var content2 = document.getElementById("hitokoto").innerText
+                            var typed = new Typed("#jinrishici-sentence", {
+                                strings: [content1, content2],
+                                startDelay: 3000,
+                                typeSpeed: 100,
+                                loop: true,
+                                backSpeed: 50,
+                                showCursor: true
+                            })
+                        }, 1000)
                     </script>
                 
             </div>
@@ -290,10 +283,10 @@
                 
                 
                 
-                <a href="/categories/%E6%96%87%E5%AD%A6/" title="文学: 1">
+                <a href="/categories/Hexo/" title="Hexo: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">文学
+                            style="background-color: #F9EBEA;">Hexo
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -308,10 +301,28 @@
                 </a>
                 
                 
+                <a href="/categories/%E6%96%87%E5%AD%A6/" title="文学: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">文学
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/java/" title="java: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #E8F8F5;">java
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/categories/%E5%AD%A6%E4%B9%A0/" title="学习: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">学习
+                            style="background-color: #FEF9E7;">学习
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -320,7 +331,7 @@
                 <a href="/categories/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #E8F8F5;">博客
+                            style="background-color: #F8F9F9;">博客
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -329,7 +340,7 @@
                 <a href="/categories/%E5%BF%83%E6%83%85/" title="心情: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #FEF9E7;">心情
+                            style="background-color: #82E0AA;">心情
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -338,7 +349,7 @@
                 <a href="/categories/%E9%9A%8F%E7%AC%94/" title="随笔: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F8F9F9;">随笔
+                            style="background-color: #D7BDE2;">随笔
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -347,7 +358,7 @@
                 <a href="/categories/%E5%B7%A5%E5%85%B7/" title="工具: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #82E0AA;">工具
+                            style="background-color: #A3E4D7;">工具
                         <span class="tag-length">1</span>
                     </span>
                 </a>

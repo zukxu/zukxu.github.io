@@ -235,31 +235,24 @@
             <div class="description center-align">
 
                 
-                    <span id="subtitle"></span>
-                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-
                     <span id="jinrishici-sentence"></span>
+                    <span id="hitokoto" style="display: none"></span>
                     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-
+                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
                     <script>
-                        var content1 = null
-                        var content2 = null
-                        if (theme.subtitle.sub1.length <= 0 && theme.subtitle.sub2.length <= 0) {
-                            content1 = $("#jinrishici-sentence").text()
-                            content2 = ""
-                        } else {
-                            content1 = ''
-                            content2 = ''
-                        }
-                        console.log(content1,content2)
-                        var typed = new Typed("#subtitle", {
-                            strings: [content1, content2],
-                            startDelay: 300,
-                            typeSpeed: 100,
-                            loop: true,
-                            backSpeed: 50,
-                            showCursor: true
-                        });
+                        setTimeout(function () {
+                            var content1 = document.getElementById("jinrishici-sentence").innerText
+                            var content2 = document.getElementById("hitokoto").innerText
+                            var typed = new Typed("#jinrishici-sentence", {
+                                strings: [content1, content2],
+                                startDelay: 3000,
+                                typeSpeed: 100,
+                                loop: true,
+                                backSpeed: 50,
+                                showCursor: true
+                            })
+                        }, 1000)
                     </script>
                 
             </div>
